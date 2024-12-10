@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masukkan Kode OTP</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Menambahkan font Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .login-image {
+        background-image: url("../images/kampuslogin.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+      }
+
+      .login-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      /* Logo dan Teks di kanan atas */
+      .logo-container {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-container img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .logo-container span {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+      }
+
+      h3.text-left {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        color: #2a356b;
+        font-size: 25px;
+      }
+
+      .small-text {
+        font-family: "Poppins", sans-serif;
+        color: #2a356b;
+        font-size: 13px;
+      }
+
+      label {
+        font-family: "Poppins", sans-serif;
+        font-weight: normal;
+        color: #2a356b;
+        font-size: 16px;
+      }
+
+      .separator-line {
+        width: 100%;
+        height: 1px;
+        background-color: #2a356b;
+        margin: 10px 0 20px 0;
+      }
+
+      .text-black {
+        color: #2a356b;
+      }
+
+      .btn-dark-gray {
+        background-color: #fcb248;
+        color: white;
+      }
+
+      /* Responsif untuk perangkat kecil */
+      @media (max-width: 767px) {
+        .logo-container {
+          top: 60px;
+          right: 10px;
+        }
+
+        .login-image {
+          height: auto;
+        }
+
+        .login-container {
+          justify-content: flex-start;
+          padding-top: 20px;
+        }
+
+        h3.text-left {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Bagian Kiri: Gambar -->
+        <div class="col-md-6 d-none d-md-block login-image">
+          <div class="logo-container">
+            <img src="../images/maxy.png" alt="Logo Universitas Maxy" />
+            <span>Universitas Maxy</span>
+          </div>
+        </div>
+
+        <!-- Bagian Kanan: Form Masukkan OTP -->
+        <div class="col-md-6 login-container">
+          <div class="col-md-8 form-container">
+            <!-- Judul Masukkan OTP -->
+            <h3 class="text-left">Lupa Password</h3>
+
+            <!-- Deskripsi OTP -->
+            <p class="text-left small-text">
+              Masukkan kode OTP yang telah kami kirimkan ke alamat email Anda
+              untuk mencapai ulang sandi Anda.
+            </p>
+
+            <!-- Formulir Masukkan OTP -->
+            <form id="otpForm">
+              <div class="form-group">
+                <label for="otp">Kode OTP</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="otp"
+                  placeholder="Masukkan kode OTP"
+                  required
+                />
+              </div>
+
+              <!-- Tombol Verifikasi -->
+              <button type="submit" class="btn btn-dark-gray btn-block mt-3">
+                Verifikasi
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="../js/manajemen/masukkan-otp-manajemen.js"></script>
+  </body>
+</html>
