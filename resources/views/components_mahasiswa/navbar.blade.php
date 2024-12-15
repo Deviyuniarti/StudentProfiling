@@ -52,7 +52,7 @@
       <!-- Dropdown Menu -->
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <!-- Data Mahasiswa -->
-        <a class="dropdown-item" href="navbar-data-mahasiswa.html">
+        <a class="dropdown-item" href="/data_mahasiswa">
           <img
             src="{{ asset('template') }}/images/navbar1.png"
             alt="Mahasiswa"

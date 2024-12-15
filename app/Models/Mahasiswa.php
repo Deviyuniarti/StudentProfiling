@@ -19,25 +19,6 @@ class Mahasiswa extends Authenticatable
         'user_id',
     ];
 
-    /**
-     * Event model untuk hashing password
-     */
-    protected static function boot()
-    {
-        parent::boot();
-
-        // Hash password saat data dibuat
-        static::creating(function ($mahasiswa) {
-            $mahasiswa->password = Hash::make($mahasiswa->password);
-        });
-
-        // Hash password saat data diperbarui
-        static::updating(function ($mahasiswa) {
-            if ($mahasiswa->isDirty('password')) {
-                $mahasiswa->password = Hash::make($mahasiswa->password);
-            }
-        });
-    }
 
     /**
      * Validasi aturan untuk model Mahasiswa
@@ -49,14 +30,6 @@ class Mahasiswa extends Authenticatable
             'email' => 'required|email|unique:mahasiswa,email',
             'password' => 'required|min:8',
         ];
-    }
-
-    /**
-     * Metode untuk memeriksa kecocokan password
-     */
-    public function checkPassword($password)
-    {
-        return Hash::check($password, $this->password);
     }
 
     // One-to-One (Mahasiswa - Profil)

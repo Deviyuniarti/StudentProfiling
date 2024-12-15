@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Auth;
 class DosenController extends Controller
 {
 
-    public function index()
+    public function dashboard()
     {   
-        return view('pages.mahasiswa.index');
+        return view('pages.dosen.dashboard');
     }
 
 

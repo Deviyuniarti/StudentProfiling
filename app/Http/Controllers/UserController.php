@@ -125,4 +125,20 @@ class UserController extends Controller
         
         return response()->json(['message' => 'Successfully logged out']);
     }
+
+    public function uploadFoto(Request $request)
+{
+    $request->validate([
+        'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+    ]);
+
+    $path = $request->file('foto')->store('profile_pictures', 'public');
+
+    // Simpan path foto ke database (opsional)
+    $user = Auth::user();
+    $user->profile_picture = $path;
+    $user->save();
+
+    return response()->json(['success' => true, 'path' => asset('storage/' . $path)]);
+}
 }

@@ -15,8 +15,8 @@
     <!-- Content Box 2 (Data Mahasiswa) -->
     <div class="content-box content-box-mahasiswa">
       <div class="left-column">
-        <div class="info"><strong>Nama</strong><span>: Kelompok 9</span></div>
-        <div class="info"><strong>NIM</strong><span>: 221222345</span></div>
+        <div class="info"><strong>Nama</strong><span>: {{ Auth::user()->name }}</span></div>
+        <div class="info"><strong>NIM</strong><span>: {{ Auth::user()->nim }}</span></div>
         <div class="info"><strong>Angkatan</strong><span>: 2022</span></div>
       </div>
       <div class="right-column">
@@ -26,7 +26,7 @@
         <div class="info">
           <strong>Prodi</strong><span>: Teknologi Informatika Multimedia</span>
         </div>
-        <div class="info"><strong>Semester</strong><span>: 5</span></div>
+        <div class="info"><strong>Semester</strong><span>: {{ Auth::user()->semester }}</span></div>
       </div>
     </div>
 

@@ -72,4 +72,10 @@ class MahasiswaController extends Controller
 
         return redirect()->back()->with('success', 'Data IPK berhasil disimpan.');
     }
+
+    public function dataMahasiswa()
+    {
+        $mahasiswa = Auth::user()->mahasiswa;
+        return view('pages.mahasiswa.data_mahasiswa', compact('mahasiswa'));
+    }
 }

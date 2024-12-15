@@ -8,42 +8,14 @@ use App\Models\RekomendasiKarir;
 
 class RekomendasiKarirController extends Controller
 {
-    public function index()
-    {
-        $rekomendasi_karir = RekomendasiKarir::all();
-        return view('pages.mahasiswa.rekomendasi_karir', compact('rekomendasi_karir'));
-    }
+     // Fungsi untuk menampilkan halaman rekomendasi karir
+     public function index()
+     {
+         // Ambil data rekomendasi karir
+         $rekomendasi_karir = RekomendasiKarir::all(); // Mengambil semua data, sesuaikan dengan kebutuhan (bisa first(), find(), dll.)
+ 
+         // Kirim data ke view rekomendasi_karir.blade.php
+         return view('pages.mahasiswa.rekomendasi_karir', compact('rekomendasi_karir'));
+     }
 
-    public function like(Request $request)
-    {
-        $request->validate([
-            'rekomendasi_id' => 'required|exists:rekomendasi_karir,id'
-        ]);
-
-        $nim = auth()->user()->nim; // Mahasiswa yang sedang login
-        $rekomendasiId = $request->rekomendasi_id;
-
-        // Cek apakah sudah ada interaksi
-        $interaksi = InteraksiRekomendasi::where('nim', $nim)
-            ->where('rekomendasi_id', $rekomendasiId)
-            ->first();
-
-        if ($interaksi) {
-            // Toggle status suka
-            $interaksi->suka = !$interaksi->suka;
-            $interaksi->save();
-        } else {
-            // Tambahkan interaksi baru
-            InteraksiRekomendasi::create([
-                'nim' => $nim,
-                'rekomendasi_id' => $rekomendasiId,
-                'suka' => true
-            ]);
-        }
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Status suka berhasil diperbarui.'
-        ]);
-    }
 }

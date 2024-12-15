@@ -13,10 +13,10 @@ class RekomendasiKarir extends Model
 
     protected $fillable = [
        'jalur_karir',
-       'penyesuaian_manual',
-       'peluang_magang',
-       'manajemen_id',
-       'nidn',
+       'deskripsi',
+       'keterampilan_diperlukan',
+       'tools',
+       'source',
        'is_selected_by_dosen',
     ];
 

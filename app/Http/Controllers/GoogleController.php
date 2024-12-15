@@ -30,11 +30,11 @@ class GoogleController extends Controller
                 $email = $user->getEmail();
 
                 // Contoh logika berdasarkan domain email
-                if (str_ends_with($email, '@admin.com')) {
+                if (str_ends_with($email, '@gmail.com')) {
                     $role = 'admin';
-                } elseif (str_ends_with($email, '@dosen.com')) {
+                } elseif (str_ends_with($email, '@gmail.com')) {
                     $role = 'dosen';
-                } elseif (str_ends_with($email, '@manajemen.com')) {
+                } elseif (str_ends_with($email, '@gmail.com')) {
                     $role = 'manajemen';
                 }
 
