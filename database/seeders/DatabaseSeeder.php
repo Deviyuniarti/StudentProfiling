@@ -31,6 +31,5 @@ class DatabaseSeeder extends Seeder
             MitraSeeder::class,
             UserSeeder::class
         ]);
-
     }
 }

@@ -18,8 +18,6 @@ return [
         'passwords' => 'users',
     ],
 
-    
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -64,6 +62,7 @@ return [
         ],
         
     ],
+
     /*
     |--------------------------------------------------------------------------
     | User Providers
@@ -99,6 +98,7 @@ return [
         'model' => App\Models\Manajemen::class,
     ],
 ],
+
 
 
         // 'users' => [
@@ -163,5 +163,4 @@ return [
     */
 
     'password_timeout' => 10800,
-
-];
+]
