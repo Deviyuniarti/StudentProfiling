@@ -7,12 +7,11 @@ use App\Http\Controllers\JadwalKuliahController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\HasilStudiController;
 use App\Http\Controllers\DosenController;
-use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ManajemenController;
 use App\Http\Controllers\RekomendasiKarirController;
 use App\Http\Controllers\ProfilController;
-use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\TagController;
 
 
 // Halaman Utama (Index)
@@ -31,26 +30,20 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/rekomendasi_karir', [RekomendasiKarirController::class, 'index'])->name('rekomendasi_karir');
         Route::post('/rekomendasi_karir/like', [RekomendasiKarirController::class, 'like'])->name('rekomendasi_karir.like');
         Route::get('/data_mahasiswa', [MahasiswaController::class, 'dataMahasiswa'])->name('mahasiswa.data_mahasiswa');
-        Route::post('/upload-foto', [UserController::class, 'uploadFoto'])->name('upload.foto');
-    });
+        Route::get('/aktivitas_mahasiswa', [MahasiswaController::class, 'aktivitasMahasiswa'])->name('mahasiswa.aktivitas_mahasiswa');
+        Route::get('/tags', [TagController::class, 'index']);
+        Route::post('/keterampilan', [KeterampilanController::class, 'store'])->name('skills.store');
 
-    // Route::middleware(['role:admin'])->group(function () {
-    //     Route::get('/admin/interaksi', [RekomendasiKarirController::class, 'manage'])->name('admin.interaksi');
-    // });
+
+    });
 });
 
-
 Route::get('/dosen', [DosenController::class, 'dashboard'])->name('dosen.dashboard');
+
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.proses');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
-// Rute Google Authentication
-Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
-Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
-
 
 
 

@@ -81,23 +81,25 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\User::class,
     ],
-        'mahasiswa' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Mahasiswa::class,
+    'mahasiswa' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Mahasiswa::class,
     ],
-        'dosen' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Dosen::class,
+    'dosen' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Dosen::class,
     ],
-        'manajemen' => [
+    'manajemen' => [
         'driver' => 'eloquent',
         'model' => App\Models\Manajemen::class,
     ],
 ],
+
+
 
 
 
@@ -163,4 +165,4 @@ return [
     */
 
     'password_timeout' => 10800,
-]
+];

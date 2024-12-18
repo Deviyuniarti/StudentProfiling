@@ -80,11 +80,16 @@
         color: #ddd; /* Warna teks saat hover */
       }
       .dropdown-toggle::after {
-        content: "\f0d7"; /* Simbol segitiga kebawah (menggunakan FontAwesome) */
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        margin-left: 5px;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff; /* Warna segitiga kebawah */
+        margin-left: 5px; /* Memberikan jarak antara teks dan segitiga */
       }
+
       /* Style untuk icon gambar di kiri teks */
       .icon {
         width: 20px; /* Ukuran icon kecil */
@@ -106,10 +111,17 @@
         color: #2a356b;
       }
 
+      /* Menyesuaikan dropdown keseluruhan */
+      .navbar .dropdown {
+        position: relative;
+        right: 70px; /* Sesuaikan dengan jarak yang diinginkan dari sisi kanan */
+      }
+
       /* Warna untuk teks Logout */
       .logout {
         color: #c70003;
       }
+
       .sidebar {
         width: 250px;
         background-color: #ffffff;
@@ -196,7 +208,7 @@
         justify-content: space-between;
         width: 1050px;
         max-width: 1200px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-bottom: 45px;
         gap: 20px;
         align-items: flex-start;
@@ -310,7 +322,7 @@
         flex-direction: column; /* Menata elemen secara vertikal */
         align-items: center; /* Menjaga semua konten agar berada di tengah */
         padding-top: 10px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-bottom: 20px;
         margin-top: -25px;
         min-height: auto;
@@ -643,7 +655,7 @@
 
         .content-box-tiga {
           width: 1050px;
-          margin-left: 290px;
+          margin-left: 310px;
         }
 
         .content-box-wrapper {
@@ -661,9 +673,9 @@
   </head>
   <body>
     <!-- Navbar -->
-      @include('components_mahasiswa.navbar')
+      @include('components.navbar')
     <!-- Sidebar -->
-      @include('components_mahasiswa.sidebar')
+      @include('components.sidebar')
 
     <!-- Content -->
     <div class="content">

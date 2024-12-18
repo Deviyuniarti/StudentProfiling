@@ -86,11 +86,16 @@
         color: #ddd; /* Warna teks saat hover */
       }
       .dropdown-toggle::after {
-        content: "\f0d7"; /* Simbol segitiga kebawah (menggunakan FontAwesome) */
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        margin-left: 5px;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff; /* Warna segitiga kebawah */
+        margin-left: 5px; /* Memberikan jarak antara teks dan segitiga */
       }
+
       /* Style untuk icon gambar di kiri teks */
       .icon {
         width: 20px; /* Ukuran icon kecil */
@@ -111,6 +116,12 @@
       .dropdown-item:not(.logout) {
         color: #2a356b;
       }
+
+      /* Menyesuaikan dropdown keseluruhan */
+      .navbar .dropdown {
+        position: relative;
+        right: 70px; /* Sesuaikan dengan jarak yang diinginkan dari sisi kanan */
+      }
 
       /* Warna untuk teks Logout */
       .logout {
@@ -188,7 +199,7 @@
         width: 1050px;
         max-width: 1200px;
         margin: 0 auto;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 8px rgba(166, 125, 125, 0.1);
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -196,13 +207,14 @@
         min-height: auto;
         font-family: "Inter", sans-serif;
         margin-top: 0;
+        
       }
       .content-box-dua {
         display: flex;
         justify-content: space-between;
         width: 1050px;
         max-width: 1200px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-top: 0px;
         margin-bottom: 20px;
         gap: 20px;
@@ -281,7 +293,7 @@
         align-items: center; /* Menyusun elemen-elemen di tengah secara horizontal */
         width: 1050px;
         max-width: 1200px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-top: 0px;
         margin-bottom: 20px;
         gap: 20px;
@@ -443,7 +455,7 @@
         align-items: center; /* Menyusun elemen-elemen di tengah secara horizontal */
         width: 1050px;
         max-width: 1200px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-top: 5px; /* Menambahkan jarak antara konten box dan elemen sebelumnya */
         margin-bottom: 20px; /* Jarak antara konten box bawah dan elemen di bawahnya */
         gap: 14px;
@@ -754,10 +766,10 @@
   </head>
   <body>
     <!-- Navbar -->
-      @include('components_mahasiswa.navbar')
+      @include('components.navbar')
 
     <!-- Sidebar -->
-      @include('components_mahasiswa.sidebar')
+      @include('components.sidebar')
 
     <!-- Content -->
     <div class="content">

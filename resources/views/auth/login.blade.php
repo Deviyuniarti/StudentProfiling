@@ -183,22 +183,6 @@
                     Masuk
                 </button>
 
-                <!-- Atau Login Dengan -->
-                <p class="text-center mt-4">Atau Login Dengan</p>
-
-                <!-- Tombol Login dengan Google -->
-                <button
-                    type="button"
-                    class="btn btn-outline-secondary btn-block d-flex align-items-center justify-content-center"
-                    onclick="window.location.href='{{ route('google.login') }}';"
-                >
-                    <img
-                        src="{{ asset('template/images/google.png') }}"
-                        alt="Google Logo"
-                        style="width: 20px; height: 20px; margin-right: 10px"
-                    />
-                    Google
-                </button>
             </form>
 
           </div>

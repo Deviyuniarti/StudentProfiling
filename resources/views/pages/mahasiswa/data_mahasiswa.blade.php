@@ -14,10 +14,10 @@
 
     <!-- Content Box Dua -->
     <div class="content-box-dua">
-      <div class="content-box-kiri">
+    <div class="content-box-kiri">
         <div class="profil-gambar">
           <img
-            src="{{ asset('template') }}/images/image.png"
+            src="{{ asset('template') }}/images/image.jpg"
             alt="Profil Gambar"
             class="gambar-bulat"
           />

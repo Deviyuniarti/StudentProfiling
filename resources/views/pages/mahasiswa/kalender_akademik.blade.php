@@ -47,7 +47,7 @@
           </thead>
           <tbody id="calendarBody">
             <!-- Kalender akan diisi secara dinamis dengan JavaScript -->
-            <script src="{{ asset('template') }}//js/mahasiswa/kalender-akademik.js"></script>
+            <script src="{{ asset('template') }}/js/mahasiswa/kalender-akademik.js"></script>
           </tbody>
         </table>
       </div>

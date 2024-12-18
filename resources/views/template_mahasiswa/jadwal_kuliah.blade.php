@@ -93,6 +93,25 @@
         vertical-align: middle; /* Agar icon sejajar dengan teks */
       }
 
+      .dropdown-toggle::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff; /* Warna segitiga kebawah */
+        margin-left: 5px; /* Memberikan jarak antara teks dan segitiga */
+      }
+
+      /* Style untuk icon gambar di kiri teks */
+      .icon {
+        width: 20px; /* Ukuran icon kecil */
+        height: 20px;
+        margin-right: 10px; /* Jarak antara icon dan teks */
+        vertical-align: middle; /* Agar icon sejajar dengan teks */
+      }
+
       /* Warna untuk teks dropdown */
       .dropdown-item {
         font-size: 16px; /* Ukuran font */
@@ -105,6 +124,12 @@
       .dropdown-item:not(.logout) {
         color: #2a356b;
       }
+
+      /* Menyesuaikan dropdown keseluruhan */
+      .navbar .dropdown {
+        position: relative;
+        right: 70px; /* Sesuaikan dengan jarak yang diinginkan dari sisi kanan */
+      }
 
       /* Warna untuk teks Logout */
       .logout {
@@ -205,7 +230,7 @@
         justify-content: space-between; /* Menjaga jarak antara dua kolom */
         align-items: flex-start;
         padding-top: 30px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-bottom: 20px;
         min-height: auto;
       }
@@ -256,7 +281,7 @@
         flex-direction: column; /* Menata elemen secara vertikal */
         align-items: center; /* Menjaga semua konten agar berada di tengah */
         padding-top: 10px;
-        margin-left: 290px;
+        margin-left: 310px;
         margin-bottom: 20px;
         min-height: auto;
       }
@@ -463,10 +488,10 @@
   </head>
   <body>
     <!-- Navbar -->
-    @include('components_mahasiswa.navbar')
+    @include('components.navbar')
 
     <!-- Sidebar -->
-    @include('components_mahasiswa.sidebar')
+    @include('components.sidebar')
 
     <!-- Content -->
     <div class="content">

@@ -47,15 +47,10 @@
               <tr>
                 <th class="left">Graphic Designer</th>
                 <th class="right">
-                <div class="like-container">
-                <button 
-                  class="like-button" 
-                  data-id="{{ $rekomendasi_karir }}" 
-                  aria-label="Tandai karir ini sebagai favorit"
-                  onclick="handleLike(this)">
-                  &#10084; <span class="like-text">Suka</span>
-                </button>
-            </div>
+                  <div class="like-container">
+                    <span class="like-icon">&#10084;</span>
+                    <span class="like-text">Suka</span>
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -94,15 +89,10 @@
               <tr>
                 <th class="left">Motion Graphic Artist</th>
                 <th class="right">
-                <div class="like-container">
-                <button 
-                  class="like-button" 
-                  data-id="{{ $rekomendasi_karir}}" 
-                  aria-label="Tandai karir ini sebagai favorit"
-                  onclick="handleLike(this)">
-                  &#10084; <span class="like-text">Suka</span>
-                </button>
-               </div>
+                  <div class="like-container">
+                    <span class="like-icon">&#10084;</span>
+                    <span class="like-text">Suka</span>
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -145,15 +135,10 @@
               <tr>
                 <th class="left">UI/UX Designer</th>
                 <th class="right">
-                <div class="like-container">
-                <button 
-                  class="like-button" 
-                  data-id="{{ $rekomendasi_karir }}" 
-                  aria-label="Tandai karir ini sebagai favorit"
-                  onclick="handleLike(this)">
-                  &#10084; <span class="like-text">Suka</span>
-                </button>
-              </div>
+                  <div class="like-container">
+                    <span class="like-icon">&#10084;</span>
+                    <span class="like-text">Suka</span>
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -194,15 +179,10 @@
               <tr>
                 <th class="left">Animator 3D</th>
                 <th class="right">
-                <div class="like-container">
-                <button 
-                  class="like-button" 
-                  data-id="{{ $rekomendasi_karir}}" 
-                  aria-label="Tandai karir ini sebagai favorit"
-                  onclick="handleLike(this)">
-                  &#10084; <span class="like-text">Suka</span>
-                </button>
-              </div>
+                  <div class="like-container">
+                    <span class="like-icon">&#10084;</span>
+                    <span class="like-text">Suka</span>
+                  </div>
                 </th>
               </tr>
             </thead>

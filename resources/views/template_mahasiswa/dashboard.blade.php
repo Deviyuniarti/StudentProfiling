@@ -72,10 +72,14 @@
         color: #ddd; /* Warna teks saat hover */
       }
       .dropdown-toggle::after {
-        content: "\f0d7"; /* Simbol segitiga kebawah (menggunakan FontAwesome) */
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        margin-left: 5px;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff; /* Warna segitiga kebawah */
+        margin-left: 5px; /* Memberikan jarak antara teks dan segitiga */
       }
 
       /* Style untuk icon gambar di kiri teks */
@@ -98,6 +102,12 @@
       .dropdown-item:not(.logout) {
         color: #2a356b;
       }
+
+      /* Menyesuaikan dropdown keseluruhan */
+      .navbar .dropdown {
+        position: relative;
+        right: 70px; /* Sesuaikan dengan jarak yang diinginkan dari sisi kanan */
+      }
 
       /* Warna untuk teks Logout */
       .logout {
@@ -478,10 +488,10 @@
   </head>
   <body>
     <!-- Navbar -->
-    @include('components_mahasiswa.navbar')
+    @include('components.navbar')
 
     <!-- Sidebar -->
-    @include('components_mahasiswa.sidebar')
+    @include('components.sidebar')
     
     <div class="content">
        @yield('content')
